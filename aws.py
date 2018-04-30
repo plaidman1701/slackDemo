@@ -12,14 +12,7 @@ def lambda_handler(event, context):
     # dump POST to CloudWatch cuz you know this is gonna need to be dissected
     print("Received event: " + json.dumps(event, indent=2))
     resp = {
-        "text":"somebody's dealing from the bottom again!",
-        "attachments": [
-            {
-                "fallback": "new sneaky card",
-                "text": "Take this card instead",
-                "image_url": getCardUrl()
-            }
-        ]
+        "body":"dealing a card!"
     }
     
     # identify cheaters
